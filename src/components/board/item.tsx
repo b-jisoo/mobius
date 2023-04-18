@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { IBoardItem } from "./type";
 
-const Container = styled.div`
+const Container = styled.li`
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 81px;
-  /* background-color: #cecece; */
-  padding: 10px 20px;
+  height: 100px;
+  padding: 20px 20px;
   box-sizing: border-box;
-  border-bottom: 1px solid #cecece;
+  border-top: 1px solid #cecece;
 `;
 
 const Title = styled.div`
@@ -21,24 +21,18 @@ const Title = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
-const UserName = styled.div`
+const NickName = styled.div`
   font-size: 15px;
-  opacity: 0.6;
+  color: #666666;
 `;
 
-interface Props {
-  title: string;
-  username: string;
-}
-[];
-
-const TopicItem = ({ title, username }: Props) => {
+const BoardItem = ({ title, nickname }: IBoardItem) => {
   return (
     <Container>
-      <UserName>{username}</UserName>
+      <NickName>{nickname}</NickName>
       <Title>{title}</Title>
     </Container>
   );
 };
 
-export default TopicItem;
+export default BoardItem;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Topic from "../components/Topic";
+import BoardSummary from "../components/board/summary/Summary";
 import { useRouter } from "../hooks/useRouter";
 import { flexCenter } from "../style/flex";
 
@@ -45,8 +45,8 @@ const Home = () => {
         게시판
         <p>원하는 게시판으로 이동해보세요</p>
         <ContentsBox>
-          <Topic topic={"Q&A"} />
-          <Contents>지식</Contents>
+          <BoardSummary title={"Q&A"} />
+          <BoardSummary title={"지식"} />
           <Contents>커뮤니티</Contents>
           <Contents>공지사항</Contents>
         </ContentsBox>

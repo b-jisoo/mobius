@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Router as RemixRouter } from "@remix-run/router/dist/router";
 import Home from "./pages/Home";
 import GeneralLayout from "./layout/GeneralLayout";
+import Community from "./pages/Community";
 
 interface RouterBase {
   id: number; // 페이지 아이디 (반복문용 고유값)
@@ -33,7 +34,7 @@ const routerData: RouterElement[] = [
     id: 1,
     path: "/community",
     label: "Community",
-    element: <Home />,
+    element: <Community />,
     withAuth: false,
   },
 ];
