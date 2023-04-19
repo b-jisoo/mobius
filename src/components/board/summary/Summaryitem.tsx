@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { IBoardSummary, IBoardSummaryitem } from "../type";
 
+const BoardSummaryitem = ({ title, nickname }: IBoardSummaryitem) => {
+  return (
+    <Container>
+      <NickName>{nickname}</NickName>
+      <Title>{title}</Title>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   margin-top: 10px;
   display: flex;
@@ -26,14 +35,5 @@ const NickName = styled.div`
   font-size: 15px;
   color: #666666;
 `;
-
-const BoardSummaryitem = ({ title, nickname }: IBoardSummaryitem) => {
-  return (
-    <Container>
-      <NickName>{nickname}</NickName>
-      <Title>{title}</Title>
-    </Container>
-  );
-};
 
 export default BoardSummaryitem;

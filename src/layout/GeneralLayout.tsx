@@ -13,7 +13,6 @@ const GeneralLayout = ({ children, isAdminPage }: GeneralLayoutProps) => {
 
   return (
     <div className="general-layout">
-      {/* TODO 4-2: Recoil atom `UserAtom`을 이용해 userProfile props 대체 및 삭제 */}
       <HeaderBar Content={"SidebarContent"} />
       <div className="general-layout__body">{children}</div>
       <Footer />

@@ -4,6 +4,23 @@ import BoardSummary from "../components/board/summary/Summary";
 import { useRouter } from "../hooks/useRouter";
 import { flexCenter } from "../style/flex";
 
+const Home = () => {
+  return (
+    <MainContainer>
+      <MainTitle>
+        게시판
+        <p>원하는 게시판으로 이동해보세요</p>
+        <ContentsBox>
+          <BoardSummary title={"Q&A"} />
+          <BoardSummary title={"지식"} />
+          <Contents>커뮤니티</Contents>
+          <Contents>공지사항</Contents>
+        </ContentsBox>
+      </MainTitle>
+    </MainContainer>
+  );
+};
+
 const MainContainer = styled.main`
   display: flex;
   height: 500vh;
@@ -37,22 +54,5 @@ const Contents = styled.div`
   height: 500px;
   background-color: #cecece;
 `;
-
-const Home = () => {
-  return (
-    <MainContainer>
-      <MainTitle>
-        게시판
-        <p>원하는 게시판으로 이동해보세요</p>
-        <ContentsBox>
-          <BoardSummary title={"Q&A"} />
-          <BoardSummary title={"지식"} />
-          <Contents>커뮤니티</Contents>
-          <Contents>공지사항</Contents>
-        </ContentsBox>
-      </MainTitle>
-    </MainContainer>
-  );
-};
 
 export default Home;

@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { IBoardItem } from "./type";
 
+const BoardItem = ({ title, nickname }: IBoardItem) => {
+  return (
+    <Container>
+      <NickName>{nickname}</NickName>
+      <Title>{title}</Title>
+    </Container>
+  );
+};
+
 const Container = styled.li`
   margin-top: 10px;
   display: flex;
@@ -25,14 +34,5 @@ const NickName = styled.div`
   font-size: 15px;
   color: #666666;
 `;
-
-const BoardItem = ({ title, nickname }: IBoardItem) => {
-  return (
-    <Container>
-      <NickName>{nickname}</NickName>
-      <Title>{title}</Title>
-    </Container>
-  );
-};
 
 export default BoardItem;

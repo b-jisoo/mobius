@@ -6,6 +6,19 @@ import { CommunityData } from "../components/board/mock/Board";
 import Pagination from "../components/board/util/Pagination";
 import ButtonBox from "../components/board/util/BoardButtonBox";
 
+const Community = () => {
+  return (
+    <Container>
+      <BoardTitle>커뮤니티</BoardTitle>
+      <ButtonBox />
+      <BoardContainer>
+        <BoardList Data={CommunityData} />
+      </BoardContainer>
+      <Pagination />
+    </Container>
+  );
+};
+
 const Container = styled.div`
   ${flexCenter}
   flex-direction: column;
@@ -25,18 +38,5 @@ const BoardTitle = styled.div`
 `;
 
 const BoardContainer = styled.div``;
-
-const Community = () => {
-  return (
-    <Container>
-      <BoardTitle>커뮤니티</BoardTitle>
-      <ButtonBox />
-      <BoardContainer>
-        <BoardList Data={CommunityData} />
-      </BoardContainer>
-      <Pagination />
-    </Container>
-  );
-};
 
 export default Community;

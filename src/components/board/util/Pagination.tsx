@@ -1,6 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+const Pagination = () => {
+  return (
+    <Container>
+      <ArrowButton>Previous</ArrowButton>
+      <Pages>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </Pages>
+      <ArrowButton>Next</ArrowButton>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   margin-top: 10px;
   border-top: 1px solid #cecece;
@@ -36,19 +50,5 @@ const Pages = styled.div`
     }
   }
 `;
-
-const Pagination = () => {
-  return (
-    <Container>
-      <ArrowButton>Previous</ArrowButton>
-      <Pages>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-      </Pages>
-      <ArrowButton>Next</ArrowButton>
-    </Container>
-  );
-};
 
 export default Pagination;

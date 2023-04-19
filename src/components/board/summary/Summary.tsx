@@ -4,6 +4,17 @@ import BoardSummaryitem from "./Summaryitem";
 import { HomeData } from "../mock/Board";
 import { IBoardSummary } from "../type";
 
+const BoardSummary = ({ title, image, boardData }: IBoardSummary) => {
+  return (
+    <Container>
+      <Title>{title}</Title>
+      {HomeData.slice(0, 5).map((data) => (
+        <BoardSummaryitem {...data} />
+      ))}
+    </Container>
+  );
+};
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -20,16 +31,5 @@ const Title = styled.div`
   padding: 30px;
   background-color: #cecece;
 `;
-
-const BoardSummary = ({ title, image, boardData }: IBoardSummary) => {
-  return (
-    <Container>
-      <Title>{title}</Title>
-      {HomeData.slice(0, 5).map((data) => (
-        <BoardSummaryitem {...data} />
-      ))}
-    </Container>
-  );
-};
 
 export default BoardSummary;

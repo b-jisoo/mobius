@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const Footer = () => {
+  return (
+    <Container>
+      <Contents>Footer</Contents>
+    </Container>
+  );
+};
+
 const Container = styled.footer`
   height: 100px;
   width: 100%;
@@ -13,13 +21,5 @@ const Contents = styled.div`
   width: 1200px;
   margin: 0 auto;
 `;
-
-const Footer = () => {
-  return (
-    <Container>
-      <Contents>Footer</Contents>
-    </Container>
-  );
-};
 
 export default Footer;

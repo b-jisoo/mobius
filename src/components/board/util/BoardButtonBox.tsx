@@ -3,6 +3,19 @@ import styled from "styled-components";
 import { flexCenter } from "../../../style/flex";
 import { blueButton } from "../../../style/blue";
 
+const ButtonBox = () => {
+  return (
+    <Box>
+      <OptionContainer>
+        <FilterOption>최신순</FilterOption>
+        <span> | </span>
+        <FilterOption>오래된순</FilterOption>
+      </OptionContainer>
+      <WriteButton>글쓰기</WriteButton>
+    </Box>
+  );
+};
+
 const Box = styled.div`
   width: 100%;
   ${flexCenter}
@@ -30,18 +43,5 @@ const WriteButton = styled.div`
   width: 85px;
   height: 35px;
 `;
-
-const ButtonBox = () => {
-  return (
-    <Box>
-      <OptionContainer>
-        <FilterOption>최신순</FilterOption>
-        <span> | </span>
-        <FilterOption>오래된순</FilterOption>
-      </OptionContainer>
-      <WriteButton>글쓰기</WriteButton>
-    </Box>
-  );
-};
 
 export default ButtonBox;
