@@ -1,5 +1,5 @@
 import React from "react";
-import BoardItem from "./item";
+import BoardItem from "./Item";
 import styled from "styled-components";
 import { IBoardList } from "./type";
 

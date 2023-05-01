@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderBar from "../components/HeaderBar";
+import HeaderBar from "./HeaderBar";
 import { useRouter } from "../hooks/useRouter";
 import Footer from "./Footer";
 

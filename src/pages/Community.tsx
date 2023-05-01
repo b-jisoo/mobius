@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { flexCenter } from "../style/flex";
-import BoardList from "../components/board/list";
+import BoardList from "../components/board/List";
 import { CommunityData } from "../components/board/mock/Board";
 import Pagination from "../components/board/util/Pagination";
 import ButtonBox from "../components/board/util/BoardButtonBox";

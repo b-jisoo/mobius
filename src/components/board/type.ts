@@ -1,3 +1,10 @@
+export interface D {}
+
+export interface IBoard {
+  title: string;
+  Data: IBoardItem[];
+}
+
 export interface IBoardItem {
   title: string;
   nickname: string;

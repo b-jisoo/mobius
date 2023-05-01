@@ -18,7 +18,11 @@ const HeaderBar = (Content: any) => {
           <div>지식</div>
           <div onClick={() => routeTo("/community")}>커뮤니티</div>
           <div>공지사항</div>
-          {user ? null : <LoginButton>로그인</LoginButton>}
+          {user ? null : (
+            <LoginButton onClick={() => routeTo("/auth/login")}>
+              로그인
+            </LoginButton>
+          )}
         </Gnb>
       </Wrapper>
     </Container>
