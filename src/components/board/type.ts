@@ -1,20 +1,18 @@
-export interface D {}
-
-export interface IBoard {
-  title: string;
-  Data: IBoardItem[];
-}
-
-export interface IBoardItem {
+export interface BoardBase {
   title: string;
   nickname: string;
 }
 
-export interface IBoardList {
-  Data: IBoardItem[];
+export interface IBoard {
+  title: string;
+  Data: BoardBase[];
 }
 
-export interface IBoardSummaryitem {
+export interface IBoardList {
+  Data: BoardBase[];
+}
+
+export interface BoardSummaryBase {
   title: string;
   nickname: string;
 }
@@ -22,5 +20,5 @@ export interface IBoardSummaryitem {
 export interface IBoardSummary {
   title: string;
   image?: string;
-  boardData?: IBoardSummaryitem[];
+  boardData?: BoardSummaryBase[];
 }

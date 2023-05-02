@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { IBoardItem } from "./type";
+import { BoardBase } from "./type";
 
-const BoardItem = ({ title, nickname }: IBoardItem) => {
+const BoardItem = ({ title, nickname }: BoardBase) => {
   return (
     <Container>
       <NickName>{nickname}</NickName>

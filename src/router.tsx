@@ -49,9 +49,16 @@ const routerData: RouterElement[] = [
 
 export const routers: RemixRouter = createBrowserRouter(
   routerData.map((router) => {
-    return {
-      path: router.path,
-      element: <GeneralLayout>{router.element}</GeneralLayout>,
-    };
+    if (router.label === "Login" || router.label === "Signup") {
+      return {
+        path: router.path,
+        element: router.element,
+      };
+    } else {
+      return {
+        path: router.path,
+        element: <GeneralLayout>{router.element}</GeneralLayout>,
+      };
+    }
   })
 );
