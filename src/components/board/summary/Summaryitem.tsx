@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IBoardSummary, BoardSummaryBase } from "../type";
+import { IBoardSummary, BoardSummaryBase } from "../../../types/board";
 
 const BoardSummaryitem = ({ title, nickname }: BoardSummaryBase) => {
   return (

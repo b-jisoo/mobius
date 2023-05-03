@@ -1,7 +1,7 @@
 import React from "react";
 import BoardItem from "./Item";
 import styled from "styled-components";
-import { IBoardList } from "./type";
+import { IBoardList } from "../../types/board";
 
 const BoardList = ({ Data }: IBoardList) => {
   return (

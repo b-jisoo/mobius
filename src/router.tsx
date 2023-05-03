@@ -4,6 +4,10 @@ import Home from "./pages/Home";
 import GeneralLayout from "./layout/GeneralLayout";
 import Community from "./pages/Community";
 import Login from "./pages/Login";
+import Knowledge from "./pages/Knowledge";
+import { BoardElement } from "./types/board";
+import Notice from "./pages/Notice";
+import Questions from "./pages/Questions";
 
 interface RouterBase {
   id: number; // 페이지 아이디 (반복문용 고유값)
@@ -34,12 +38,33 @@ const routerData: RouterElement[] = [
   {
     id: 1,
     path: "/community",
-    label: "Community",
+    label: "커뮤니티",
     element: <Community />,
     withAuth: false,
   },
   {
     id: 2,
+    path: "/knowledge",
+    label: "지식",
+    element: <Knowledge />,
+    withAuth: false,
+  },
+  {
+    id: 3,
+    path: "/notice",
+    label: "공지사항",
+    element: <Notice />,
+    withAuth: false,
+  },
+  {
+    id: 4,
+    path: "/questions",
+    label: "Q&A",
+    element: <Questions />,
+    withAuth: false,
+  },
+  {
+    id: 5,
     path: "/auth/login",
     label: "Login",
     element: <Login />,
@@ -61,4 +86,18 @@ export const routers: RemixRouter = createBrowserRouter(
       };
     }
   })
+);
+
+export const BoardArticle: BoardElement[] = routerData.reduce(
+  (prev, router) => {
+    return [
+      ...prev,
+      {
+        id: router.id,
+        path: router.path,
+        label: router.label,
+      },
+    ];
+  },
+  [] as BoardElement[]
 );

@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import BoardSummaryitem from "./Summaryitem";
 import { HomeData } from "../mock/Board";
-import { IBoardSummary } from "../type";
+import { IBoardSummary } from "../../../types/board";
 
 const BoardSummary = ({ title, image, boardData }: IBoardSummary) => {
   return (
     <Container>
       <Title>{title}</Title>
-      {HomeData.slice(0, 5).map((data) => (
-        <BoardSummaryitem {...data} />
+      {HomeData.slice(0, 5).map((data, i) => (
+        <BoardSummaryitem key={i} {...data} />
       ))}
     </Container>
   );

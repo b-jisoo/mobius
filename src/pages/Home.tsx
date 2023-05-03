@@ -13,8 +13,8 @@ const Home = () => {
         <ContentsBox>
           <BoardSummary title={"Q&A"} />
           <BoardSummary title={"지식"} />
-          <Contents>커뮤니티</Contents>
-          <Contents>공지사항</Contents>
+          <BoardSummary title={"커뮤니티"} />
+          <BoardSummary title={"공지사항"} />
         </ContentsBox>
       </MainTitle>
     </MainContainer>
@@ -23,7 +23,6 @@ const Home = () => {
 
 const MainContainer = styled.main`
   display: flex;
-  height: 500vh;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 50px;

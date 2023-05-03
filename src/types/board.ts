@@ -22,3 +22,9 @@ export interface IBoardSummary {
   image?: string;
   boardData?: BoardSummaryBase[];
 }
+
+export interface BoardElement {
+  id: number;
+  path: string;
+  label: string;
+}

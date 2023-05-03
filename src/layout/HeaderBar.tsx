@@ -12,12 +12,12 @@ const HeaderBar = (Content: any) => {
   return (
     <Container>
       <Wrapper>
-        <Logo onClick={() => routeTo("/")}>logo</Logo>
+        <Logo href="/">logo</Logo>
         <Gnb>
-          <div>Q&A</div>
-          <div>지식</div>
-          <div onClick={() => routeTo("/community")}>커뮤니티</div>
-          <div>공지사항</div>
+          <a href="/questions">Q&A</a>
+          <a href="/knowledge">지식</a>
+          <a href="/community">커뮤니티</a>
+          <a href="/notice">공지사항</a>
           {user ? null : (
             <LoginButton onClick={() => routeTo("/auth/login")}>
               로그인
@@ -59,7 +59,7 @@ const Gnb = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;

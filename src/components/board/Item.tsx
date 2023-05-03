@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BoardBase } from "./type";
+import { BoardBase } from "../../types/board";
 
 const BoardItem = ({ title, nickname }: BoardBase) => {
   return (
