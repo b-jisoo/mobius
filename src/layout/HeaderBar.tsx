@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useRouter } from "../hooks/useRouter";
 import { blueButton } from "../style/blue";
 import { flexCenter } from "../style/flex";
+import { hover } from "../style/hover";
+import { Link } from "react-router-dom";
 
 const HeaderBar = (Content: any) => {
   // 유저 정보를 확인하고 유저 정보가 있다면 로그인 버튼 대신 유저 정보를 보여준다.
@@ -12,12 +14,12 @@ const HeaderBar = (Content: any) => {
   return (
     <Container>
       <Wrapper>
-        <Logo href="/">logo</Logo>
+        <Logo to="/">logo</Logo>
         <Gnb>
-          <a href="/questions">Q&A</a>
-          <a href="/knowledge">지식</a>
-          <a href="/community">커뮤니티</a>
-          <a href="/notice">공지사항</a>
+          <Link to="/questions">Q&A</Link>
+          <Link to="/knowledge">지식</Link>
+          <Link to="/community">커뮤니티</Link>
+          <Link to="/notice">공지사항</Link>
           {user ? null : (
             <LoginButton onClick={() => routeTo("/auth/login")}>
               로그인
@@ -57,9 +59,12 @@ const Gnb = styled.div`
   div {
     cursor: pointer;
   }
+  a {
+    ${hover}
+  }
 `;
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;

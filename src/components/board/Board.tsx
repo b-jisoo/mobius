@@ -5,14 +5,11 @@ import { CommunityData } from "./mock/Board";
 import ButtonBox from "./util/BoardButtonBox";
 import styled from "styled-components";
 import Pagination from "./util/Pagination";
-import { BoardArticle } from "../../router";
 
-const Board = () => {
-  const currentPath = window.location.pathname;
-  const Article = BoardArticle.filter((router) => router.path === currentPath);
+const Board = ({ title }: any) => {
   return (
     <Container>
-      <BoardTitle>{Article[0].label}</BoardTitle>
+      <BoardTitle>{title}</BoardTitle>
       <ButtonBox />
       <BoardContainer>
         <BoardList Data={CommunityData} />
@@ -33,7 +30,7 @@ const BoardTitle = styled.div`
   width: 100%;
   height: 30px;
   padding: 30px;
-  background-color: #cecece;
+  background-color: #dddddd;
   margin: 30px 0;
 
   font-size: 23px;

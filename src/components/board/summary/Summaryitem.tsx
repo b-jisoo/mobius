@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { IBoardSummary, BoardSummaryBase } from "../../../types/board";
+import { hover } from "../../../style/hover";
 
 const BoardSummaryitem = ({ title, nickname }: BoardSummaryBase) => {
   return (
     <Container>
-      <NickName>{nickname}</NickName>
-      <Title>{title}</Title>
+      <NickName>
+        <span>{nickname}</span>
+      </NickName>
+      <Title>
+        <span>{title}</span>
+      </Title>
     </Container>
   );
 };
@@ -30,10 +35,16 @@ const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  span {
+    ${hover}
+  }
 `;
 const NickName = styled.div`
   font-size: 15px;
   color: #666666;
+  span {
+    ${hover}
+  }
 `;
 
 export default BoardSummaryitem;

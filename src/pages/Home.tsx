@@ -28,12 +28,11 @@ const MainContainer = styled.main`
   padding-top: 50px;
 `;
 
-const MainTitle = styled.p`
+const MainTitle = styled.div`
   font-size: 25px;
   font-weight: 600;
   p {
     font-size: 15px;
-    opacity: 0.6;
     margin-top: 25px;
   }
 `;
