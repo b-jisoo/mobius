@@ -8,6 +8,7 @@ import Knowledge from "./pages/Knowledge";
 import { BoardElement } from "./types/board";
 import Notice from "./pages/Notice";
 import Questions from "./pages/Questions";
+import Write from "./pages/Write";
 
 interface RouterBase {
   id: number; // 페이지 아이디 (반복문용 고유값)
@@ -68,6 +69,13 @@ const routerData: RouterElement[] = [
     path: "/auth/login",
     label: "Login",
     element: <Login />,
+    withAuth: false,
+  },
+  {
+    id: 6,
+    path: "/:communiti/write",
+    label: "글쓰기",
+    element: <Write />,
     withAuth: false,
   },
 ];

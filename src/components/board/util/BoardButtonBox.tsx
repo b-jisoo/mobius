@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { flexCenter } from "../../../style/flex";
 import { blueButton } from "../../../style/blue";
+import { useRouter } from "../../../hooks/useRouter";
 
 const ButtonBox = () => {
+  const { routeTo } = useRouter();
+
   return (
     <Box>
       <OptionContainer>
@@ -11,7 +14,7 @@ const ButtonBox = () => {
         <span> | </span>
         <FilterOption>오래된순</FilterOption>
       </OptionContainer>
-      <WriteButton>글쓰기</WriteButton>
+      <WriteButton onClick={() => routeTo("write")}>글쓰기</WriteButton>
     </Box>
   );
 };
